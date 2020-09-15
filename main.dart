@@ -3,7 +3,7 @@ import 'package:just_class/calling_constructor.dart';
 import 'package:just_class/tiles.dart';
 
 void main() {
-  runApp((home: MyApp()));
+  runApp(MaterialApp(home: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
