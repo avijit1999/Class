@@ -9,7 +9,7 @@ class Tiles extends StatefulWidget {
   _TilesState createState() => _TilesState();
 }
 
-class _TilesState extends state<Tiles> {
+class _TilesState extends State<Tiles> {
   getDioData() async {
     var dio = Dio();
     Response response =
