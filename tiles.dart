@@ -1,13 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:just_class/calling_constructor.dart';
+//import 'package:http/http.dart';
+import 'package:dio/dio.dart';
+import 'dart:convert';
 
-class Tiles extends StatelessWidget{
+class Tiles extends StatefullWidget{
   @override
-  var TilesState extends state<Tiles>{
+  _TilesState createState() => _TilesState();
+}
+
+  class _TilesState extends state<Tiles>{
+
+  getDioData()  async {
+  var dio = Dio();
+  Response response = await dio.get('https://jsonplaceholder.typicode.com/photos');
+  print(response.data[0]);
+}
     constList list =ConstList();
 
     @override
     Widget build(BuildContext context){
+      getDioData();
       return Scaffold(
         body: ListView.builder(
           itemCount:list.student.length,
@@ -18,7 +31,7 @@ class Tiles extends StatelessWidget{
               subtitle: Text('$(List.listRollNo(index))'),
             );
           }
-        );
+        )
       );
     }
   }
