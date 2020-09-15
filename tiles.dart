@@ -8,7 +8,7 @@ class Tiles extends StatelessWidget{
 
     @override
     Widget build(BuildContext context){
-      returm Scaffold(
+      return Scaffold(
         body: ListView.builder(
           itemCount:list.student.length,
           itemBuilder:(BuildContext context,index)
