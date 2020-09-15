@@ -16,7 +16,7 @@ class Tiles extends StatefullWidget{
   Response response = await dio.get('https://jsonplaceholder.typicode.com/photos');
   print(response.data[0]);
 }
-    constList list =ConstList();
+    ConstList list =ConstList();
 
     @override
     Widget build(BuildContext context){
